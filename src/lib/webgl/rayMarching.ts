@@ -40,9 +40,8 @@ export default (canvasId: string): void => {
 	const modelRenderer = new QuadRenderer(glm);
 	const modelType = new ModelType(glm, quad.vertices, quad.indices, quad.normals, quad.textureCoords);
 	modelRenderer.registerNewModel(modelType, QuadShader.RayMarch, 'quad');
-	modelRenderer.registerNewModel(modelType, QuadShader.Mandelbrot, 'quad');
 
-	const camera = new Camera(glm, keyListener, mouseListener,0, 0, 4.6);
+	const camera = new Camera(glm, keyListener, mouseListener,0, 0, 1.5);
 
 	const startTime = Date.now() / 1000;
 	let lastUpdate = startTime;
@@ -53,18 +52,9 @@ export default (canvasId: string): void => {
 		const instance = new ModelInstance();
 		instance.updateRotation(0, 0, 0);
 		instance.updatePosition((col-1) *2.1, (row-1) *2.1, 0);
-		modelRenderer.addInstance(instance, i % 2 ?QuadShader.Mandelbrot: QuadShader.RayMarch, 'quad');
+		modelRenderer.addInstance(instance, QuadShader.RayMarch, 'quad');
 	}
-
-	// const instance1 = new ModelInstance();
-	// instance1.updateRotation(0, 0, 0);
-	// modelRenderer.addInstance(instance1, QuadShader.RayMarch, 'quad');
-
-	// const instance2 = new ModelInstance();
-	// instance2.updateRotation(0, 0, 0);
-	// instance2.updatePosition(2.1, 0, 0);
-	// modelRenderer.addInstance(instance2, QuadShader.Mandelbrot, 'quad');
-
+	
 	const render = () => {
 		const now = Date.now() / 1000;
 		const deltaTime = now - lastUpdate;

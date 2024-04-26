@@ -41,7 +41,7 @@ export default (canvasId: string): void => {
   const mouseListener = new MouseListener(canvas);
   const keyListener = new KeyListener(canvas);
 
-	const modelRenderer = new ModelRenderer();
+	const modelRenderer = new ModelRenderer(glm);
 	const light = new Light(0, -100, 0, 1.0, 1.0, 1.0, 0.3);
 	const material = new Material(glm);
 	material.addDiffuse(diffuse);

@@ -1,4 +1,4 @@
-import GLM from '../GLManager/GLM';
+import {GLManager} from '../GLManager/GLM';
 import Shader from '../Shaders/ModelShader/shader';
 import ModelType from '../Models/ModelType';
 import ModelInstance from '../Models/ModelInstance';
@@ -11,11 +11,13 @@ type Model = {
 };
 
 export default class ModelRenderer {
+	glm: GLManager;
 	shader: Shader;
 	models: { [index: string]: Model };
 
-	constructor() {
-		this.shader = new Shader();
+	constructor(glm: GLManager) {
+		this.glm = glm;
+		this.shader = new Shader(this.glm);
 		this.models = {};
 	}
 
@@ -33,8 +35,8 @@ export default class ModelRenderer {
 	};
 
 	preRender = () => {
-		GLM.viewport();
-		GLM.depthTest(true);
+		this.glm.viewport();
+		this.glm.depthTest(true);
 	};
 
 	render = (light: Light, camera: Camera) => {
@@ -46,7 +48,7 @@ export default class ModelRenderer {
 			this.models[model].type.use(this.shader);
 			this.models[model].instances.forEach((instance) => {
 				this.shader.enableTransformationMatrix(instance.getTransformationMatrix());
-				GLM.drawTriangles(this.models[model].type.indicies.length);
+				this.glm.drawTriangles(this.models[model].type.indicies.length);
 			});
 		});
 	};

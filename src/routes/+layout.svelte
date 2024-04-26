@@ -1,4 +1,5 @@
 <script>
+	import logo from '$lib/images/svelte-logo.svg';
 	import Header from './Header.svelte';
 	import './styles.css';
 	import '../app.css';
@@ -12,7 +13,12 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>built using</p>
+		<div class="ml-2 mr-5 w-5">
+			<a href="https://kit.svelte.dev">
+				<img src={logo} alt="SvelteKit" />
+			</a>
+		</div>
 	</footer>
 </div>
 
@@ -29,15 +35,15 @@
 		flex-direction: column;
 		padding: 1rem;
 		width: 100%;
-		max-width: 64rem;
+		max-width: 100rem;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
 
 	footer {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		flex-direction: row;
+		justify-content: right;
 		align-items: center;
 		padding: 12px;
 	}
