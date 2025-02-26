@@ -1,0 +1,106 @@
+{
+  "SimpleSprites": {
+    "spriteSize": 3,
+    "numberOfSprites": 6,
+    "rotation": {
+      "rotateMode": "all"
+    },
+    "flip": {
+      "flipMode": "all"
+    }
+  },
+  "CircuitTiles": {
+    "spriteSize": 15,
+    "numberOfSprites": 16,
+    "rotation": {
+      "rotateMode": "all"
+    },
+    "flip": {
+      "flipMode": "all"
+    },
+    "weights": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 0.5,
+      "5": 1,
+      "6": 0.5,
+      "7": 0.2,
+      "8": 1,
+      "9": 0.5,
+      "10": 0.2,
+      "11": 0.2,
+      "12": 0.5,
+      "13": 0.2,
+      "14": 0.5,
+      "15": 0.1
+    },
+    "customEdges": {
+      "0": ["bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb"],
+      "1": ["bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb"],
+      "2": ["bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb"],
+      "3": ["bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb"],
+      "4": ["bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb"],
+      "5": ["bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb"],
+      "6": ["bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb"],
+      "7": ["bbbbbbbbvvvvvvvvbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbvvvvvvvvbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb"],
+      "8": ["bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbbbbbbbbbcccccccc", "cccccccccccccccccccccccc", "bbbbbbbbbbbbbbbbcccccccc"],
+      "9": ["bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "ccccccccbbbbbbbbbbbbbbbb", "bbbbbbbbbbbbbbbbcccccccc"],
+      "10": ["bbbbbbbbvvvvvvvvbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbvvvvvvvvbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb"],
+      "11": ["bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbvvvvvvvvbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb"],
+      "12": ["cccccccccccccccccccccccc", "cccccccccccccccccccccccc", "cccccccccccccccccccccccc", "cccccccccccccccccccccccc"],
+      "13": ["bbbbbbbbvvvvvvvvbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbbbbbbbbbbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb"],
+      "14": ["bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb", "ccccccccbbbbbbbbbbbbbbbb", "bbbbbbbbbbbbbbbbcccccccc"],
+      "15": ["bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb", "bbbbbbbbttttttttbbbbbbbb"]
+    }
+  },
+  "Forest": {
+    "spriteSize": 15,
+    "numberOfSprites": 16,
+    "rotation": {
+      "rotateMode": "individual",
+      "spritesToRotate": {
+        "0": ["0", "90", "180", "240"],
+        "3": ["0", "90", "180", "240"],
+        "4": ["0", "90", "180", "240"],
+        "5": ["0", "180"],
+        "7": ["0", "90", "180", "240"]
+      }
+    },
+    "flip": {
+      "flipMode": "individual",
+      "spritesToFlip": {
+        "1": ["x"],
+        "2": ["x"],
+        "3": ["y", "y90", "x", "y240"],
+        "6": ["x"],
+        "8": ["x"],
+        "9": ["x"],
+        "10": ["x"],
+        "11": ["x"],
+        "13": ["x"],
+        "14": ["x"],
+        "15": ["x"]
+      }
+    },
+    "weights": {
+      "0": 0.2,
+      "1": 1,
+      "2": 1,
+      "3": 0.5,
+      "4": 0.7,
+      "5": 0.1,
+      "6": 1,
+      "7": 0.01,
+      "8": 0.05,
+      "9": 0.05,
+      "10": 1,
+      "11": 0.5,
+      "12": 0.05,
+      "13": 0.05,
+      "14": 0.5,
+      "15": 0.5
+    }
+  }
+}

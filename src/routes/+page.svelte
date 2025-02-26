@@ -1,51 +1,33 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import runRayMarching from '$lib/webgl/rayMarching';
+	import runMandelbrot from '$lib/webgl/mandelbrot';
+	import runTextured from '$lib/webgl/WebGL';
+
+	onMount(() => {
+		runRayMarching('rayMarching');
+		runMandelbrot('mandelbrot');
+		runTextured('textured');
+	});
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
+<div class="flex flex-row justify-center space-x-8">
+	<div>
+		<h1 class="text-3xl my-10">Ray Marching</h1>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-	</h1>
-</section>
+		<canvas id="rayMarching" style="height: 30vh; width: 30vh;" />
+	</div>
+	<div>
+		<h1 class="text-3xl my-10">Mandelbrot</h1>
 
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
+		<canvas id="mandelbrot" style="height: 30vh; width: 30vh;" />
+	</div>
+</div>
 
-	h1 {
-		width: 100%;
-	}
+<div class="flex flex-row justify-center">
+	<div>
+		<h1 class="text-3xl my-10">Textured</h1>
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
+		<canvas id="textured" style="height: 40vh; width: 60vh;" />
+	</div>
+</div>

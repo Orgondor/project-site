@@ -12,13 +12,16 @@
 		</svg>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
+				<a href="/">Shaders</a>
 			</li>
 			<!-- <li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
 				<a href="/sverdle">Sverdle</a>
 			</li> -->
-			<li aria-current={$page.url.pathname === '/shaders' ? 'page' : undefined}>
+			<!-- <li aria-current={$page.url.pathname === '/shaders' ? 'page' : undefined}>
 				<a href="/shaders">Shaders</a>
+			</li> -->
+			<li aria-current={$page.url.pathname === '/wave-collapse' ? 'page' : undefined}>
+				<a href="/wave-collapse">Wave Collapse</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
